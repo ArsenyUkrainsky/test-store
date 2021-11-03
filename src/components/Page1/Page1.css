@@ -1,0 +1,80 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.user__info {
+  list-style-type: none;
+  margin-bottom: 25px;
+}
+
+.user__info:hover {
+  background-color: bisque;
+  text-shadow: teal;
+  transition: 0.9s;
+}
+
+.user__text {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.pages {
+  margin: 10px auto;
+}
+
+.page {
+  border: 1px solid lightgray;
+  border-radius: 100%;
+  padding: 5px 10px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.page_active {
+  border: 2px solid gray;
+  font-weight: 700;
+}
+
+.button {
+  background-size: 100%;
+  padding: 8px 30px;
+  border: none;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 33%);
+  background-image: linear-gradient(106deg, #6d44d4, #2881ef);
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background-color: transparent;
+  font: 500 16px/32px Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+  border: 1px solid hsla(0deg, 0%, 100%, 50%);
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+.button:hover {
+  background-image: linear-gradient(160deg, #44cbd4, #2881ef);
+}
+
+.user__avatar {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user__avatar:hover {
+  transform: scale(125%);
+  transition: 0.8s;
+}

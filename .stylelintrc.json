@@ -1,3 +1,19 @@
 {
-     "extends": "stylelint-config-standard"
+     "extends": "stylelint-config-standard",
+     "plugins": [
+      "stylelint-selector-bem-pattern"
+    ],
+    "rules": {
+      "selector-class-pattern": "^([a-z][a-z0-9]*)((_|__)[a-z0-9]+)*$",
+      "color-function-notation": "legacy",
+      "plugin/selector-bem-pattern": {
+        "componentName": "[A-Z]+",
+        "componentSelectors": {
+          "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+          "combined": "^\\.combined-{componentName}-[a-z]+$"
+        },
+        "utilitySelectors": "^\\.util-[a-z]+$"
+      }
+      
+    }
    }

@@ -1,19 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import Counter from '../Counter/Counter'
+import Page1 from '../Page1/Page1'
+import Page2 from '../Page2/Page2'
 
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-  const testButton = () => setCount((x) => x + 1)
-  return (
-    <div className='app'>
-      <h1>Test</h1>
-      <p>{count}</p>
-      <button type='button' onClick={testButton}>
-        прибавить
-      </button>
-    </div>
-  )
-}
+const App = () => (
+  <div className='app'>
+    <Switch>
+      <Route exact path='/rX'>
+        <Page1 />
+      </Route>
+      <Route exact path='/mX'>
+        <Page2 />
+      </Route>
+      <Route exact path='/test'>
+        <Counter initialCount={0} />
+      </Route>
+    </Switch>
+  </div>
+)
 
 export default App
